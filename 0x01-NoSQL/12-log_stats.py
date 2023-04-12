@@ -15,7 +15,7 @@ if __name__ == "__main__":
         count_method = client.logs.nginx.count_documents({'method': method})
         print(f'\tmethod {method}: {count_method}')
 
-    check = db_nginx.count_documents(
+    check = client.logs.nginx.count_documents(
         {"method": "GET", "path": "/status"}
     )
 
